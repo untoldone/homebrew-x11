@@ -4,6 +4,13 @@ class Gxemul < Formula
   url "http://gxemul.sourceforge.net/src/gxemul-0.6.0.1.tar.gz"
   sha256 "0790823d8d7f8848c98318ace829f7a0159a5f9b79d80bd8c367fb17014dcda9"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "c15b27199542546df2da84907c354e870968d12d203e68d63b01e022ff1233ba" => :el_capitan
+    sha256 "2977c74e9303e3e9fcf52b80c916db5b5fee1a747ba6dc3bf757dee473ef9494" => :yosemite
+    sha256 "d7bda2f82aab04c1a307ff9c77f2b412b2ef3b1f77b3ef32e1acdf97fbf5fb0f" => :mavericks
+  end
+
   depends_on :x11
 
   # Fixes some compilation errors when built using Clang.
