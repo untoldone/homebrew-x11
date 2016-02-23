@@ -1,8 +1,7 @@
 class RxvtUnicode < Formula
   homepage "http://software.schmorp.de/pkg/rxvt-unicode.html"
-  url "http://dist.schmorp.de/rxvt-unicode/rxvt-unicode-9.21.tar.bz2"
-  mirror "https://mirrors.kernel.org/debian/pool/main/r/rxvt-unicode/rxvt-unicode_9.21.orig.tar.bz2"
-  sha256 "75270ed72bc5895a64a1d7392bf45a622204192371c3965bd3dd978dc088956b"
+  url "http://dist.schmorp.de/rxvt-unicode/rxvt-unicode-9.22.tar.bz2"
+  sha256 "e94628e9bcfa0adb1115d83649f898d6edb4baced44f5d5b769c2eeb8b95addd"
 
   bottle do
     sha256 "be8b99848a935c3c9e6b34cfb25fa1addd59785e00293dc65b9cbb0d03b50acd" => :yosemite
