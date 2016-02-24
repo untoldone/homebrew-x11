@@ -1,7 +1,7 @@
 class TigerVnc < Formula
   homepage "http://tigervnc.org/"
-  url "https://github.com/TigerVNC/tigervnc/archive/v1.4.0.tar.gz"
-  sha256 "5e3fc4a6fec5c3901e38ccabc2f7264e224e04688e57b80a80073c28193584c8"
+  url "https://github.com/TigerVNC/tigervnc/archive/v1.6.0.tar.gz"
+  sha256 "98ffe98fcfe883e6c35aec579295b53d73d2ccf62e0f6e53a73ecad993b096ca"
 
   depends_on "cmake" => :build
   depends_on "gnutls" => :recommended
