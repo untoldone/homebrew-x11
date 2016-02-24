@@ -24,6 +24,8 @@ class RxvtUnicode < Formula
   # Patch 3 removes an extra 10% font width that urxvt adds:
   # https://web.archive.org/web/20111120115603/http://aur.archlinux.org/packages.php?ID=44649
   # Patch 4 fixes `make install` target on case-insensitive filesystems
+  # (Patch 4 won't be accepted upstream; do not re-submit)
+  # http://lists.schmorp.de/pipermail/rxvt-unicode/2010q2/001186.html
   patch :DATA
 
   fails_with :llvm do
