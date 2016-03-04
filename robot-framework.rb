@@ -8,9 +8,9 @@ class RobotFramework < Formula
   head "https://github.com/robotframework/robotframework.git", :branch => "master"
   bottle do
     cellar :any_skip_relocation
-    sha256 "264393fe15b7233214070fc6596c17269f4fe568b009a13109ea7fe9d13a4393" => :el_capitan
-    sha256 "ac3a8349b3aa088589373f961c983269814427d8e38da1e7a6e834de9c7954ea" => :yosemite
-    sha256 "3c2d021464e2c95ac0af975eb51428852817795df811d3ba76fff420b26c1b6e" => :mavericks
+    sha256 "b40a511ae02549250f6bf450e5cbd220b6a518bd6228eb06cb22a4485f5561a4" => :el_capitan
+    sha256 "c377d897c23190160d0783514365274a60436fb91e7317db5673912fdf2d7e90" => :yosemite
+    sha256 "d2dcf8ecc30acaefff2349f54e3c9938180708b6f99881f9eca5411c618cac98" => :mavericks
   end
 
   depends_on :x11
