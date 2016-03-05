@@ -13,9 +13,11 @@ class Rdesktop < Formula
   depends_on "openssl"
   depends_on :x11
 
+  option "with-smartcard", "Build with Smart Card Support"
+
   # Note: The patch below is meant to remove the reference to the
   # undefined symbol SCARD_CTL_CODE. Since we are compiling with
-  # --disable-smartcard, we don't need it anyway (and it should
+  # --disable-smartcard (by default), we don't need it anyway (and it should
   # probably have been #ifdefed in the original code).
   # upstream bug report: https://sourceforge.net/p/rdesktop/bugs/352/
   patch :DATA
@@ -23,10 +25,14 @@ class Rdesktop < Formula
   def install
     args = ["--prefix=#{prefix}",
             "--disable-credssp",
-            "--disable-smartcard", # disable temporally before upstream fix
             "--with-openssl=#{Formula["openssl"].opt_prefix}",
             "--x-includes=#{MacOS::X11.include}",
             "--x-libraries=#{MacOS::X11.lib}"]
+  if build.with? "smartcard"
+    args << "--enable-smartcard"
+  else
+    args << "--disable-smartcard"
+  end
     system "./configure", *args
     system "make", "install"
   end
