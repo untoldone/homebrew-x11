@@ -10,8 +10,8 @@ class SwiProlog < Formula
   end
 
   devel do
-    url "http://www.swi-prolog.org/download/devel/src/swipl-7.3.17.tar.gz"
-    sha256 "ec1cdbeee833c0aff59a3e7aa182581d3b44562064cbd0983176aaf0b265652a"
+    url "http://www.swi-prolog.org/download/devel/src/swipl-7.3.18.tar.gz"
+    sha256 "639d524e83cb6da138b783e855305c1c94d9d4f0fa9047c72e81dbaab11c7ff0"
   end
 
   head do
@@ -62,13 +62,17 @@ class SwiProlog < Formula
     ENV.append "DISABLE_PKGS", "jpl" if build.without? "jpl"
     ENV.append "DISABLE_PKGS", "xpce" if build.without? "xpce"
 
+    # Default value Os causes segfault in latest swi-prolog devel version
+    # This is the workaround
+    ENV.O2
+
     # SWI-Prolog's Makefiles don't add CPPFLAGS to the compile command, but do
     # include CIFLAGS. Setting it here. Also, they clobber CFLAGS, so including
     # the Homebrew-generated CFLAGS into COFLAGS here.
     ENV["CIFLAGS"] = ENV.cppflags
     ENV["COFLAGS"] = ENV.cflags
 
-    # Build the packages unless --lite option specified
+    # Build the packages unless --with-lite option specified
     args << "--with-world" if build.without? "lite"
 
     # './prepare' prompts the user to build documentation
