@@ -10,8 +10,8 @@ class SwiProlog < Formula
   end
 
   devel do
-    url "http://www.swi-prolog.org/download/devel/src/swipl-7.3.18.tar.gz"
-    sha256 "639d524e83cb6da138b783e855305c1c94d9d4f0fa9047c72e81dbaab11c7ff0"
+    url "http://www.swi-prolog.org/download/devel/src/swipl-7.3.19.tar.gz"
+    sha256 "693cfeac8f31d050ddcec27e550586359e98a64dc820398997d0ce6b8f564354"
   end
 
   head do
@@ -61,10 +61,6 @@ class SwiProlog < Formula
     args = ["--prefix=#{libexec}", "--mandir=#{man}"]
     ENV.append "DISABLE_PKGS", "jpl" if build.without? "jpl"
     ENV.append "DISABLE_PKGS", "xpce" if build.without? "xpce"
-
-    # Default value Os causes segfault in latest swi-prolog devel version
-    # This is the workaround
-    ENV.O2
 
     # SWI-Prolog's Makefiles don't add CPPFLAGS to the compile command, but do
     # include CIFLAGS. Setting it here. Also, they clobber CFLAGS, so including
