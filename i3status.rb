@@ -1,6 +1,7 @@
 class I3status < Formula
   desc "Status bar for i3"
   homepage "http://i3wm.org/i3status"
+  revision 1
   head "https://github.com/i3/i3status.git"
 
   stable do
@@ -55,6 +56,6 @@ class I3status < Formula
   test do
     result = shell_output("#{bin}/i3status -v")
     result.force_encoding("UTF-8") if result.respond_to?(:force_encoding)
-    assert_match "#{version}", result
+    assert_match version.to_s, result
   end
 end
