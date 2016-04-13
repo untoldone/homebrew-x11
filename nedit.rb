@@ -4,6 +4,13 @@ class Nedit < Formula
   url "https://downloads.sourceforge.net/project/nedit/nedit-source/nedit-5.6a-src.tar.gz"
   sha256 "53677983cb6c91c5da1fcdcac90f7f9a193f08fa13b7a6330bc9ce21f9461eed"
 
+  bottle do
+    cellar :any
+    sha256 "8a6e4d439a90f3a7aa4728907a1a2f5becc32ad2e92e729a53b9fc286e7f30e8" => :el_capitan
+    sha256 "48ad7bff68c36148447844bf15572cec2c14975a1c227486a87a8c28dee19cbd" => :yosemite
+    sha256 "589624a13c080f3cbbb8a5af6f22243d1ce3b48270d795cc9da0a2d7c22d1593" => :mavericks
+  end
+
   depends_on "openmotif"
   depends_on :x11
 
