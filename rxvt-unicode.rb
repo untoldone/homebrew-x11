@@ -7,9 +7,9 @@ class RxvtUnicode < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "be6ae7c9d4b131878b34433c26643fbf7c48e1f76e16f3257a6e903cdaba58e0" => :el_capitan
-    sha256 "9c5ed384b2c9521524c86f2622e740a1a123938d32753918c82290299e42cc8e" => :yosemite
-    sha256 "72852cb08614f68b2111bf3deacf93701b554db93a36eaedb1d125b4a04b5d2e" => :mavericks
+    sha256 "b5d0675ced63363bce7c9e75643d2e2d35b7f27bba61968397e5a312f7397a09" => :el_capitan
+    sha256 "27bb62ca9a8b9e1ef47ab4c2e4e887b2b66b88d187e822d7a9c75bdc5b390e17" => :yosemite
+    sha256 "2566f3bec4dd18bff6a9787774050623feec3b86f199c872c92e52b705594e9d" => :mavericks
   end
 
   option "without-iso14755", "Disable ISO 14775 Shift+Ctrl hotkey"
