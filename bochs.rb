@@ -1,6 +1,6 @@
 class Bochs < Formula
+  desc "Open source IA-32 (x86) PC emulator written in C++"
   homepage "http://bochs.sourceforge.net/"
-  desc "A highly portable open source IA-32 (x86) PC emulator written in C++"
   url "https://downloads.sourceforge.net/project/bochs/bochs/2.6.8/bochs-2.6.8.tar.gz"
   sha256 "79700ef0914a0973f62d9908ff700ef7def62d4a28ed5de418ef61f3576585ce"
 
@@ -11,14 +11,13 @@ class Bochs < Formula
     sha256 "93613f9e68caedc20b4ae3ea3b5ea7b1e5b4450e8c1319cdd3a5e364111fd67c" => :mavericks
   end
 
+  option "with-gdb-stub", "Enable GDB Stub"
+
   depends_on "pkg-config" => :build
   depends_on :x11
   depends_on "gtk+"
 
-  option "with-gdb-stub", "Enable GDB Stub"
-
   def install
-
     args = %W[
       --prefix=#{prefix}
       --with-x11
