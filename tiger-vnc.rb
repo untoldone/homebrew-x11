@@ -3,6 +3,10 @@ class TigerVnc < Formula
   url "https://github.com/TigerVNC/tigervnc/archive/v1.6.0.tar.gz"
   sha256 "98ffe98fcfe883e6c35aec579295b53d73d2ccf62e0f6e53a73ecad993b096ca"
 
+  bottle do
+    sha256 "8ec9241b2172d2b9b496440fe14ef44763a418dcf29e4c1378bdcfa476bfdb5a" => :mavericks
+  end
+
   depends_on "cmake" => :build
   depends_on "gnutls" => :recommended
   depends_on "jpeg-turbo"
