@@ -22,6 +22,13 @@ class MitScheme < Formula
   depends_on :x11 => :recommended
 
   def install
+    # Setting -march=native, which is what --build-from-source does, can fail
+    # with the error "the object ..., passed as the second argument to apply, is
+    # not the correct type." Only Haswell and above appear to be impacted.
+    # Reported 23rd Apr 2016: https://savannah.gnu.org/bugs/index.php?47767
+    # Note that `unless build.bottle?` avoids overriding --bottle-arch=[...].
+    ENV["HOMEBREW_OPTFLAGS"] = "-march=#{Hardware.oldest_cpu}" unless build.bottle?
+
     # The build breaks __HORRIBLY__ with parallel make -- one target will
     # erase something before another target gets it, so it's easier to change
     # the environment than to change_make_var, because there are Makefiles
@@ -39,7 +46,6 @@ class MitScheme < Formula
       compiler/etc/disload.scm
       edwin/techinfo.scm
       edwin/unix.scm
-      microcode/configure
       swat/c/tk3.2-custom/Makefile
       swat/c/tk3.2-custom/tcl/Makefile
       swat/scheme/other/btest.scm
@@ -47,12 +53,18 @@ class MitScheme < Formula
       inreplace f, "/usr/local", prefix
     end
 
+    inreplace "microcode/configure" do |s|
+      s.gsub! "/usr/local", prefix
+      # Fixes "configure: error: No MacOSX SDK for version: 10.10"
+      # Reported 23rd Apr 2016: https://savannah.gnu.org/bugs/index.php?47769
+      s.gsub! /SDK=MacOSX\${MACOSX}$/, "SDK=MacOSX#{MacOS.sdk.version}"
+    end
+
     # The configure script will add "-isysroot" to CPPFLAGS, so it didn't
     # check .h here by default even Homebrew is installed in /usr/local. This
     # breaks things when gdbm or other optional dependencies was installed
     # using Homebrew
     ENV.prepend "CPPFLAGS", "-I#{HOMEBREW_PREFIX}/include"
-    ENV["MACOSX_SYSROOT"] = MacOS.sdk_path
     system "etc/make-liarc.sh", "--prefix=#{prefix}", "--mandir=#{man}"
     system "make", "install"
   end
