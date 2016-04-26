@@ -56,6 +56,9 @@ class Openmotif < Formula
 
     system "./autogen.sh", *args
     system "make", "install"
+
+    # Avoid conflict with Perl
+    mv man3/"CORE.3", man3/"openmotif-CORE.3"
   end
 
   test do
