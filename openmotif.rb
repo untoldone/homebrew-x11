@@ -5,9 +5,10 @@ class Openmotif < Formula
   sha256 "637efa09608e0b8f93465dbeb7c92e58ebb14c4bc1b488040eb79a65af3efbe0"
 
   bottle do
-    sha256 "2815e098cf644cd74e421f8ab98abe28575399a6bd5df86de1db4ef8464befa3" => :yosemite
-    sha256 "c6f95906e50ead63eab05702aa28fd0ad303597aac205e81778df737f65f6110" => :mavericks
-    sha256 "595baa6d82cb4d62647933674efa03a51219a65ad411a9493cd864d0ffa3d0d2" => :mountain_lion
+    revision 1
+    sha256 "7db6ba5bd3830a7d0f5b9cf7559fe894ad7183403c3ffafa7be8047864b31e27" => :el_capitan
+    sha256 "b534988096828e53e68414c172d63ede947dcffe7be610c322b78e7a1b2a189b" => :yosemite
+    sha256 "7bdce19ae766c90bdbe8ff98ecefa580d09ba2bc72082cd0ff57524ab92dd989" => :mavericks
   end
 
   depends_on "automake" => :build
