@@ -5,9 +5,9 @@ class Scantailor < Formula
   sha256 "1f7b96bbe5179d46e332aea8d51ba50545fe7c510811e51588b6a4919e4feeab"
 
   bottle do
-    sha256 "d0ddcdd1b83acd05c3021ca4a8bb0f05a577a62956ea5c71e5d00ed5cb8786e6" => :yosemite
-    sha256 "87c57b5c683081c9feccbbd7dba3988155cbeeb72312577fd919f39fadabf486" => :mavericks
-    sha256 "556a56a3d441822ca4b3442991f4e6c805e7d0cb5cf35c42ceae664b760ee53d" => :mountain_lion
+    sha256 "2a21074a8430c238445ddc5fada4ebb9d0b5a1fdf98109ccf330bf444aad1532" => :el_capitan
+    sha256 "49c75d11ca8609957d74cf80f6e7fe1edb17dfef216c040596a704658ee82758" => :yosemite
+    sha256 "f293ccb87f65a885e4670bb6e229d9d3766f9ae58f99e2da7a56fa3e35285ac2" => :mavericks
   end
 
   depends_on "cmake" => :build
