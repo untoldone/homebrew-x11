@@ -5,9 +5,10 @@ class Rdesktop < Formula
   sha256 "88b20156b34eff5f1b453f7c724e0a3ff9370a599e69c01dc2bf0b5e650eece4"
 
   bottle do
-    sha256 "a6fe9d0323bbdc6db424f056b1cf20df23c35a1d4f15ab52c1b0eb30e19287e7" => :yosemite
-    sha256 "fdfac37d70b9e750de33be617345d0d7226bcc764e8a3fbd16cc2ef8e0fc8731" => :mavericks
-    sha256 "162ad10246d51275699969b449aa09e30aaa852c7892331970bccc587f5a2163" => :mountain_lion
+    revision 1
+    sha256 "b741a40a858cfb2867e8fd55ac2f322294206861ed45fb8f308b68d267d1748e" => :el_capitan
+    sha256 "cadfc5e5d8d5b06ac5b682284c4c6282fad47c318eaa696b0a15c40d7eef8418" => :yosemite
+    sha256 "2ca359d13413a29c945d9684c85d85d62ac40329df388c74ab2afd922043ae05" => :mavericks
   end
 
   depends_on "openssl"
