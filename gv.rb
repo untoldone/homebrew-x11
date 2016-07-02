@@ -1,6 +1,6 @@
 class Gv < Formula
   homepage "https://www.gnu.org/s/gv/"
-  url "http://ftpmirror.gnu.org/gv/gv-3.7.4.tar.gz"
+  url "https://ftpmirror.gnu.org/gv/gv-3.7.4.tar.gz"
   mirror "https://ftp.gnu.org/gnu/gv/gv-3.7.4.tar.gz"
   sha256 "2162b3b3a95481d3855b3c4e28f974617eef67824523e56e20b56f12fe201a61"
 
