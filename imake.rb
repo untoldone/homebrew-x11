@@ -1,8 +1,8 @@
 class Imake < Formula
   homepage "http://xorg.freedesktop.org"
-  url "http://xorg.freedesktop.org/releases/individual/util/imake-1.0.7.tar.bz2"
+  url "https://xorg.freedesktop.org/releases/individual/util/imake-1.0.7.tar.bz2"
   sha256 "690c2c4ac1fad2470a5ea73156cf930b8040dc821a0da4e322014a42c045f37e"
-  revision 1
+  revision 2
 
   bottle do
     sha256 "51e11d2fd584dcd64de2eac798e3aa0338a9a4381ee6ff9668f644592d3d406b" => :yosemite
@@ -20,7 +20,7 @@ class Imake < Formula
   end
 
   resource "xorg-cf-files" do
-    url "http://xorg.freedesktop.org/releases/individual/util/xorg-cf-files-1.0.5.tar.bz2"
+    url "https://xorg.freedesktop.org/releases/individual/util/xorg-cf-files-1.0.5.tar.bz2"
     sha256 "ed23b85043edecc38fad4229e0ebdb7ff80b570e746bc03a7c8678d601be7ed4"
   end
 
