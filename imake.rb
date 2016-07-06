@@ -5,9 +5,9 @@ class Imake < Formula
   revision 2
 
   bottle do
-    sha256 "51e11d2fd584dcd64de2eac798e3aa0338a9a4381ee6ff9668f644592d3d406b" => :yosemite
-    sha256 "59c69499aa39e82294efdd1ae3eb410b858831118becf6547e48b95a679e292d" => :mavericks
-    sha256 "581af6e0f66567983ed06c8e20f9a461acee4570c30c2e7b4a670314d6a49a06" => :mountain_lion
+    sha256 "6ca8c2397884a1a5bd629ce0a53a5c2152dca4d34ce99d5330fef7800a7f489d" => :el_capitan
+    sha256 "14b73b74b8fdd51f8c214fd71bc03b09f18b3c915afb5b3fb506ed072080e530" => :yosemite
+    sha256 "cc9a0a574ceb22feaf921194115fc211fa98b729eec8aa0985f6fa591efacc3d" => :mavericks
   end
 
   depends_on "pkg-config" => :build
