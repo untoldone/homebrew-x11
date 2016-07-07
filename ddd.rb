@@ -7,9 +7,10 @@ class Ddd < Formula
   revision 1
 
   bottle do
-    sha256 "10fadf3297a98b3682f312594a67707f78b6feee6f8ddfa616f4943bd2f5e222" => :yosemite
-    sha256 "e35574c21a4cd7192596d676e79029964482f623ecaac9372e666f79b276263a" => :mavericks
-    sha256 "faea737b1f709c7d1a068c34a37a6f13a5c23fc7bf3e3fc6149479014c7c132b" => :mountain_lion
+    revision 1
+    sha256 "6ff50b63141d4e2dec008bce3dcf0aa5829bf04f979ffbe35e4fd9712c381906" => :el_capitan
+    sha256 "c6c0853a9db160fc80ecfc738338f106777fa5ff59a08ccf1f5da1dd6e49c164" => :yosemite
+    sha256 "5f97825a643af147f8e2a11b66e41c3f896cb3bffccb16b914bd413b1d180446" => :mavericks
   end
 
   depends_on "openmotif"
