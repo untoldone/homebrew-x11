@@ -1,4 +1,5 @@
 class Ddd < Formula
+  desc "Graphical front-end for command-line debuggers"
   homepage "https://www.gnu.org/s/ddd/"
   url "https://ftpmirror.gnu.org/ddd/ddd-3.3.12.tar.gz"
   mirror "https://ftp.gnu.org/gnu/ddd/ddd-3.3.12.tar.gz"
@@ -16,10 +17,12 @@ class Ddd < Formula
 
   # Needed for OSX 10.9 DP6 build failure:
   # https://savannah.gnu.org/patch/?8178
-  patch :p0 do
-    url "https://savannah.gnu.org/patch/download.php?file_id=29114"
-    sha256 "aaacae79ce27446ead3483123abef0f8222ebc13fd61627bfadad96016248af6"
-  end if MacOS.version >= :mavericks
+  if MacOS.version >= :mavericks
+    patch :p0 do
+      url "https://savannah.gnu.org/patch/download.php?file_id=29114"
+      sha256 "aaacae79ce27446ead3483123abef0f8222ebc13fd61627bfadad96016248af6"
+    end
+  end
 
   # https://savannah.gnu.org/bugs/?41997
   patch do
@@ -34,14 +37,19 @@ class Ddd < Formula
                           "--enable-builtin-manual",
                           "--prefix=#{prefix}"
 
-    # From MacPorts:
-    # make will build the executable "ddd" and the X resource file "Ddd" in the same directory,
-    # as HFS+ is case-insensitive by default, this will loosely FAIL
-    system "make EXEEXT=exe"
+    # From MacPorts: make will build the executable "ddd" and the X resource
+    # file "Ddd" in the same directory, as HFS+ is case-insensitive by default
+    # this will loosely FAIL
+    system "make", "EXEEXT=exe"
 
     ENV.deparallelize
-    system "make install EXEEXT=exe"
-
+    system "make", "install", "EXEEXT=exe"
     mv bin/"dddexe", bin/"ddd"
+  end
+
+  test do
+    output = shell_output("#{bin}/ddd --version")
+    output.force_encoding("ASCII-8BIT") if output.respond_to?(:force_encoding)
+    assert_match version.to_s, output
   end
 end
