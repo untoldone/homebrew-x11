@@ -1,7 +1,9 @@
 class Dzen2 < Formula
-  homepage "http://sites.google.com/site/gotmor/dzen"
-  url "http://sites.google.com/site/gotmor/dzen2-0.8.5.tar.gz"
+  desc "General purpose messaging, notification and menuing program"
+  homepage "https://github.com/robm/dzen"
+  url "https://sites.google.com/site/gotmor/dzen2-0.8.5.tar.gz"
   sha256 "5e4ce96e8ed22a4a0ad6cfafacdde0532d13d049d77744214b196c4b2bcddff9"
+  head "https://github.com/robm/dzen.git"
 
   depends_on :x11
 
