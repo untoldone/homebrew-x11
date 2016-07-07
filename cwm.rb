@@ -15,10 +15,11 @@ class Cwm < Formula
   end
 
   bottle do
-    cellar :any
-    sha256 "66505c17dbe6aabfc53d2cfd0d9b09f77ca384637ffcf99a209e0c87f6b37a85" => :yosemite
-    sha256 "9665155b0132c3fd248bb81d44204b90e8b352fb82054b238b98d7223a92abdd" => :mavericks
-    sha256 "895d906f52d9eca0a83a290bcb1499343ecf91b22cbee77f0494a39239fa7859" => :mountain_lion
+    cellar :any_skip_relocation
+    revision 1
+    sha256 "86b35fa5552b122e49569856979e103308111aac4ee88bbd10a281ee508d2961" => :el_capitan
+    sha256 "bf394fe2acc18890e1cb3b42b80a8f1f5f494cc5c01d83a6a6d1a4fa342c17b2" => :yosemite
+    sha256 "0af986635a49c77234a18f322c62826134463bed24c5d8283919c2d546d8673e" => :mavericks
   end
 
   depends_on "pkg-config" => :build
