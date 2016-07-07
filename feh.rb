@@ -1,7 +1,8 @@
 class Feh < Formula
-  homepage "http://feh.finalrewind.org/"
-  url "http://feh.finalrewind.org/feh-2.12.1.tar.bz2"
-  sha256 "9026ece01d79560e1eff9715fa1765eef82e22c766da5994ee787984a6f466a1"
+  desc "X11 image viewer"
+  homepage "https://feh.finalrewind.org/"
+  url "https://feh.finalrewind.org/feh-2.16.1.tar.bz2"
+  sha256 "6e55289a3be4495a437a0b037c7b5e86edf64ec74ab63d2d26fa50df1b62b6b3"
 
   bottle do
     sha256 "589af770bac5f344cc962afa18342a003907d552b6820718b25f6319c93e92c3" => :yosemite
@@ -21,6 +22,6 @@ class Feh < Formula
   end
 
   test do
-    system bin/"feh", "-v"
+    assert_match version.to_s, shell_output("#{bin}/feh -v")
   end
 end
