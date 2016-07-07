@@ -26,8 +26,8 @@ class Clusterit < Formula
   end
 
   def caveats; <<-EOS.undent
-    The `run` executable was symlinked into bin as `clusterit-run` to
-    avoid putting a generically-named executable in the top-level prefix.
+    The `run` executable was installed as `clusterit-run` to avoid
+    putting a generically-named executable in the top-level prefix.
   EOS
   end
 
