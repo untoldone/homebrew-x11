@@ -7,9 +7,9 @@ class Jskeus < Formula
 
   bottle do
     cellar :any
-    sha256 "fae0d5f7d1977b2d713d2809e4aed4de7c8a49c5fc1ab5bc5067107832b9ace4" => :el_capitan
-    sha256 "17036543131a28767293950f64fe16946abc89bba1f54e1662cc878960320f85" => :yosemite
-    sha256 "b49d9db1bdfc277e87c75f341ee2ca022a7a26d4c966c0311ad36e12a3fafb06" => :mavericks
+    sha256 "7565502a3d89709a9f78b64d1e1db135760bbcaa76cd9c884c006707c5fb7157" => :el_capitan
+    sha256 "3bbb17d4248d11e341bd287bb60f6f920ca97a25923302fa020a2c197e7654eb" => :yosemite
+    sha256 "0db86c355a4fdea0465d51314c6457c27cb535a8af9019601479edc929026197" => :mavericks
   end
 
   depends_on :x11
