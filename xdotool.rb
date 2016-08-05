@@ -4,6 +4,12 @@ class Xdotool < Formula
   url "https://github.com/jordansissel/xdotool/archive/v3.20160804.2.tar.gz"
   sha256 "52b8aa08ff6e2d55c2c9a8eaa3601f210491676f8e637f3669ac84c562fc78c9"
 
+  bottle do
+    sha256 "21ce8342f3868e5fedb623587f95b247dfae5aaa7c413b154c081577d48316b2" => :el_capitan
+    sha256 "43d6fd4a0d9a56d4fb5c25b059c6caefb7a63dfc49a01ab9e87986fd26a04dbb" => :yosemite
+    sha256 "f864cdc4e45f806d5fa8fe7120e7cabe8427631a1ede7fe0026df9d0b40ab96f" => :mavericks
+  end
+
   depends_on "pkg-config" => :build
   depends_on "libxkbcommon"
 
