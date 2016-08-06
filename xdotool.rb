@@ -5,9 +5,9 @@ class Xdotool < Formula
   sha256 "ddafca1239075c203769c17a5a184587731e56fbe0438c09d08f8af1704e117a"
 
   bottle do
-    sha256 "21ce8342f3868e5fedb623587f95b247dfae5aaa7c413b154c081577d48316b2" => :el_capitan
-    sha256 "43d6fd4a0d9a56d4fb5c25b059c6caefb7a63dfc49a01ab9e87986fd26a04dbb" => :yosemite
-    sha256 "f864cdc4e45f806d5fa8fe7120e7cabe8427631a1ede7fe0026df9d0b40ab96f" => :mavericks
+    sha256 "eb53a6093737dd0d26cf83a056943da18f438e64216a95f059eb3cc6770bf3fe" => :el_capitan
+    sha256 "290fc7273fb6e7c345e59e8a49c6706d51020bb0c1230b032f74f6cca1478c7d" => :yosemite
+    sha256 "5d493d2cb2ee8fc42f2eeb5d15370e35ebd1530ea209561a8e6c30ef08807fd0" => :mavericks
   end
 
   depends_on "pkg-config" => :build
