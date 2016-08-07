@@ -1,4 +1,5 @@
 class Rdesktop < Formula
+  desc "UNIX client for connecting to Windows Remote Desktop Services"
   homepage "http://www.rdesktop.org/"
   url "https://downloads.sourceforge.net/project/rdesktop/rdesktop/1.8.3/rdesktop-1.8.3.tar.gz"
   mirror "https://mirrors.kernel.org/debian/pool/main/r/rdesktop/rdesktop_1.8.3.orig.tar.gz"
@@ -11,10 +12,10 @@ class Rdesktop < Formula
     sha256 "2ca359d13413a29c945d9684c85d85d62ac40329df388c74ab2afd922043ae05" => :mavericks
   end
 
+  option "with-smartcard", "Build with Smart Card Support"
+
   depends_on "openssl"
   depends_on :x11
-
-  option "with-smartcard", "Build with Smart Card Support"
 
   # Note: The patch below is meant to remove the reference to the
   # undefined symbol SCARD_CTL_CODE. Since we are compiling with
@@ -24,16 +25,20 @@ class Rdesktop < Formula
   patch :DATA
 
   def install
-    args = ["--prefix=#{prefix}",
-            "--disable-credssp",
-            "--with-openssl=#{Formula["openssl"].opt_prefix}",
-            "--x-includes=#{MacOS::X11.include}",
-            "--x-libraries=#{MacOS::X11.lib}"]
-  if build.with? "smartcard"
-    args << "--enable-smartcard"
-  else
-    args << "--disable-smartcard"
-  end
+    args = %W[
+      --prefix=#{prefix}
+      --disable-credssp
+      --with-openssl=#{Formula["openssl"].opt_prefix}
+      --x-includes=#{MacOS::X11.include}
+      --x-libraries=#{MacOS::X11.lib}
+    ]
+
+    if build.with? "smartcard"
+      args << "--enable-smartcard"
+    else
+      args << "--disable-smartcard"
+    end
+
     system "./configure", *args
     system "make", "install"
   end
