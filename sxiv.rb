@@ -8,9 +8,11 @@ class Sxiv < Formula
   head "https://github.com/muennich/sxiv.git"
 
   bottle do
-    sha256 "cd000f4147840935793888585f06b51e42a72e68e0fee6ecd1a9030440766a1c" => :yosemite
-    sha256 "60cf275f71414ff48f5462e079c133fae94ba49762aa2f8428ac6a2305210059" => :mavericks
-    sha256 "76b5d60ce52886ff4ce6e48cec2abb99b5d850fdab60d33c739a89fe7fdc1b13" => :mountain_lion
+    cellar :any
+    revision 1
+    sha256 "8f26e720d8bb1583828210fd5aad7907c65dea733177d6b3ca4b041d41c13a98" => :el_capitan
+    sha256 "65ea6058d7970bd8fbef2bad4f4f6809f83b204e34fbc0f082916707b9986a2d" => :yosemite
+    sha256 "cc7d4b3fa3d11a85aa95e4ff52fa46a0dc05d441d0da3dc3b0489114cc749532" => :mavericks
   end
 
   depends_on :x11
