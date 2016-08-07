@@ -5,7 +5,10 @@ class TigerVnc < Formula
   sha256 "98ffe98fcfe883e6c35aec579295b53d73d2ccf62e0f6e53a73ecad993b096ca"
 
   bottle do
-    sha256 "8ec9241b2172d2b9b496440fe14ef44763a418dcf29e4c1378bdcfa476bfdb5a" => :mavericks
+    revision 1
+    sha256 "fc590bf2fcc5a3736d7f24ac8e8926dd131784cb4748d2defb326ca6422513a5" => :el_capitan
+    sha256 "933b6a9bca39a0cac6cfb139e357761b2cffedd0e291adf63a8b811a00052dc3" => :yosemite
+    sha256 "b5fd64ba9aef4476952b5a74e20d30f54907e1728b9208d72883336d4ce95414" => :mavericks
   end
 
   depends_on "cmake" => :build
