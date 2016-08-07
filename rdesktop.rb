@@ -6,10 +6,10 @@ class Rdesktop < Formula
   sha256 "88b20156b34eff5f1b453f7c724e0a3ff9370a599e69c01dc2bf0b5e650eece4"
 
   bottle do
-    revision 1
-    sha256 "b741a40a858cfb2867e8fd55ac2f322294206861ed45fb8f308b68d267d1748e" => :el_capitan
-    sha256 "cadfc5e5d8d5b06ac5b682284c4c6282fad47c318eaa696b0a15c40d7eef8418" => :yosemite
-    sha256 "2ca359d13413a29c945d9684c85d85d62ac40329df388c74ab2afd922043ae05" => :mavericks
+    revision 2
+    sha256 "03e7e306cfaa344771d0ae57a34c846748b4f217c10e63e239e4b8247d04141f" => :el_capitan
+    sha256 "2509dcf0e5195165a7636649d214098e20757548fc79b4744d65f0840a97988f" => :yosemite
+    sha256 "7c5890bcc5d0d2f211db4aa4cdd0eb26fc2e2e3fb0a09d44caa185821187cca8" => :mavericks
   end
 
   option "with-smartcard", "Build with Smart Card Support"
