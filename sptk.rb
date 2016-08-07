@@ -1,4 +1,5 @@
 class Sptk < Formula
+  desc "Suite of speech signal processing tools for UNIX environments"
   homepage "http://sp-tk.sourceforge.net/"
   url "https://downloads.sourceforge.net/project/sp-tk/SPTK/SPTK-3.8/SPTK-3.8.tar.gz"
   sha256 "028d6b3230bee73530f3d67d64eafa32cf23eaa987545975d260d0aaf6953f2b"
@@ -9,9 +10,9 @@ class Sptk < Formula
     sha256 "accf671e09d35e65547ebc3e8e46f2b4c1221822ea972d2dee5e57a931ac99cc" => :mountain_lion
   end
 
-  depends_on :x11
-
   option "with-examples", "Install example data and documentation"
+
+  depends_on :x11
 
   conflicts_with "libextractor", :because => "both install `extract`"
   conflicts_with "num-utils", :because => "both install `average`"
