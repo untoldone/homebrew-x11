@@ -11,6 +11,8 @@ class Openmotif < Formula
     sha256 "7bdce19ae766c90bdbe8ff98ecefa580d09ba2bc72082cd0ff57524ab92dd989" => :mavericks
   end
 
+  option :universal
+
   depends_on "automake" => :build
   depends_on "autoconf" => :build
   depends_on "libtool" => :build
@@ -19,8 +21,6 @@ class Openmotif < Formula
   depends_on "jpeg" => :optional
   depends_on "libpng" => :optional
   depends_on :x11
-
-  option :universal
 
   if build.universal?
     depends_on "flex" => [:build, :universal]
