@@ -1,7 +1,10 @@
 class Tabbed < Formula
+  desc "Simple generic tabbed fronted to xembed aware applications"
   homepage "http://tools.suckless.org/tabbed"
   url "http://dl.suckless.org/tools/tabbed-0.6.tar.gz"
   sha256 "7651ea3acbec5d6a25469e8665da7fc70aba2b4fa61a2a6a5449eafdfd641c42"
+
+  head "http://git.suckless.org/tabbed", :using => :git
 
   bottle do
     cellar :any
@@ -9,8 +12,6 @@ class Tabbed < Formula
     sha256 "978e35e95e15ced37893eda8d1c8398ec1bfc42cf3dd7abaef46fde79df3f999" => :mountain_lion
     sha256 "63e94a93cdb84b3fda35acdd2833a0350d920fcebaf6256ace0201791e32aa12" => :lion
   end
-
-  head "http://git.suckless.org/tabbed", :using => :git
 
   depends_on :x11
 
