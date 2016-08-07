@@ -7,10 +7,11 @@ class Tabbed < Formula
   head "http://git.suckless.org/tabbed", :using => :git
 
   bottle do
-    cellar :any
-    sha256 "982a6ceb32c866fd0722a4b1f532f169997a78418aec07193560b38b1ddcadf0" => :mavericks
-    sha256 "978e35e95e15ced37893eda8d1c8398ec1bfc42cf3dd7abaef46fde79df3f999" => :mountain_lion
-    sha256 "63e94a93cdb84b3fda35acdd2833a0350d920fcebaf6256ace0201791e32aa12" => :lion
+    cellar :any_skip_relocation
+    revision 1
+    sha256 "d8cae93e79574d26ebeecb138c1b249920e9e30d77eae614695ebacdc96b8562" => :el_capitan
+    sha256 "ced60eb28e2793135d0a3cf99593fc92e961228e0846bf1fcf14fbddf13de3f4" => :yosemite
+    sha256 "eba76e91f5d758721dbdda08f00017473d43884ced7be84877338ed0b05d2b63" => :mavericks
   end
 
   depends_on :x11
