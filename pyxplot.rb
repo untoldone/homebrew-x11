@@ -5,6 +5,8 @@ class Pyxplot < Formula
   sha256 "1c592a0bc77caec445a8d72534471c01d66ca1806309e6c983847c2e0b95e689"
   revision 1
 
+  bottle :disable, "Homebrew cannot currently build bottles against TeX"
+
   depends_on :x11
   depends_on :tex
   depends_on "fftw"
