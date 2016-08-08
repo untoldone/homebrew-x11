@@ -9,10 +9,10 @@ class Pgplot < Formula
   revision 1
 
   bottle do
-    revision 1
-    sha256 "edee06a049593b59c674b7a509ab797958950813d9d5809d8fde49c02bcf024e" => :yosemite
-    sha256 "23fa9dbad25ab32e27001f0da418023240511d5192f5712615505ae4705d410c" => :mavericks
-    sha256 "1006d1d20be0805e193eb7cffa27ae93efa3feefae8813f0baac2a340e159e66" => :mountain_lion
+    revision 2
+    sha256 "b081503a0fbd3b50659c319dc9d482833ade23996f853df350ef585adca45b8b" => :el_capitan
+    sha256 "73d268e20bba27b848959044fc9ba49bbd257a32be1f55b0ae106495d4c016d9" => :yosemite
+    sha256 "f01bff0d8714aa5ca73cf5ae92945fe5d72344dd2c3b5e4bfcc071ba702b8a1b" => :mavericks
   end
 
   option "with-button", "Install libbutton"
