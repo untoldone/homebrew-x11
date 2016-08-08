@@ -5,10 +5,10 @@ class Openmotif < Formula
   sha256 "637efa09608e0b8f93465dbeb7c92e58ebb14c4bc1b488040eb79a65af3efbe0"
 
   bottle do
-    revision 1
-    sha256 "7db6ba5bd3830a7d0f5b9cf7559fe894ad7183403c3ffafa7be8047864b31e27" => :el_capitan
-    sha256 "b534988096828e53e68414c172d63ede947dcffe7be610c322b78e7a1b2a189b" => :yosemite
-    sha256 "7bdce19ae766c90bdbe8ff98ecefa580d09ba2bc72082cd0ff57524ab92dd989" => :mavericks
+    revision 2
+    sha256 "a7306b58b4f448614f89ede7bbf21e6d9f8618268ff99d039ecfc0473b29e3f3" => :el_capitan
+    sha256 "b858f095abc5fce79c4f32070465973e72418b3a5eda9e66ea76b3cb019621ea" => :yosemite
+    sha256 "3a8210579e8fc6412c46e4ab91b910ea0de83d19265047729ed6115062b04479" => :mavericks
   end
 
   option :universal
