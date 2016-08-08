@@ -1,4 +1,5 @@
 class Pyxplot < Formula
+  desc "Multi-purpose graph plotting tool"
   homepage "http://pyxplot.org.uk/"
   url "http://pyxplot.org.uk/src/pyxplot_0.9.2.tar.gz"
   sha256 "1c592a0bc77caec445a8d72534471c01d66ca1806309e6c983847c2e0b95e689"
