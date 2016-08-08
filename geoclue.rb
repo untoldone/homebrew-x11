@@ -18,4 +18,3 @@ class Geoclue < Formula
     system "make", "install"
   end
 end
-
